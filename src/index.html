@@ -1,0 +1,82 @@
+    <!DOCTYPE Html>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="css/index.css">
+        </head>
+        <body> 
+            <div class="navBar">
+                <a class="navEle" href = "https://www.keybr.com/" target="_blank"> Keybr.com</a>
+                <a class="navEle" href = "./tableExample.html">Sources of content </a></th>
+                <a class="navEle" href = "./dreams.html"> MLK Dream speech </a>     
+            </div>
+            <div class="div2">
+                <form class="form">
+                        <label for="fname">First Name:</label><br>
+                        <input type="text" id="fname" name="fname" value ="Liam" ><br>
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Humble"> 
+                        <input type="submit" id="revString" value="click me!">
+                </form>
+                <p id="updateText"> </p>
+            </div>
+            <p id="hint"> (hint: edit the form values and hit submit!)</p>
+            <div>
+                <p class="head">Hi my name is Liam, which is really cool! Since when its spelt back words its MAIL!</p>
+                <p class="head"> <b> I really Like the vidoe game leauge of legends! Here are some of my 
+                    favourite champions !</b></p>
+                    <table>
+                        <th>
+                            <tr>
+                                <th>Champion</th>
+                                <th></th>
+                                <th>Champion quotes </th>
+                            </tr>
+                        </th>
+                        <tb>
+                            <tr>
+                                <td class="cname">Naafiri</td>
+                                <td><img class="size" src="../resources/naafiri.jpg"></td>
+                                <td class="champTeser"> "Let the world hear our howls and know that death awaits." <td>
+                            </tr>
+                            <tr>
+                                <td class="cname">Corki</td>
+                                <td><img class="size" src="../resources/corki.jpg"></td>
+                                <td class="champTeser"> "I'm up to snuff, and gots me an ace machine!" </td>
+                            </tr>
+                            <tr>
+                                <td class="cname">Syndra</td>
+                                <td><img class = size  src="../resources/syndra.jpg"></td>
+                                <td class="champTeser"> "People fear what they cannot understand."</td>
+                            </tr>
+                        </tb>
+                    </table>
+            </div>
+
+        <script>
+            const button = document.getElementById("revString");
+            const form = document.querySelector(".form")
+            button.addEventListener("click", function(event) {
+                event.preventDefault(); 
+                var fvalue = document.getElementById("fname");  
+                var lvalue = document.getElementById("lname");
+                let reversed = "";
+                let temp = fvalue.value + " " + lvalue.value;
+
+                for (let i = temp.length - 1; i >= 0; i--) {
+                    reversed += temp[i];
+                }
+                const text = document.getElementById("updateText");
+                
+                text.textContent = "Your name backwards: "+ reversed;  
+                text.style.display = 'block';
+
+
+            });
+        </script>
+
+        </body>
+        <footer>
+            <p> <u> <i> Made by Liam Humble </i> </u></p>
+        </footer>
+    </html>
